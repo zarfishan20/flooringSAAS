@@ -1,0 +1,74 @@
+/* Mobile Navbar */
+.d-lg-none {
+    display: block;
+}
+
+
+@media (max-width: 992px) {
+    .content {
+        margin-left: 0;
+    }
+}
+/* General page styling */
+.page {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+}
+/* index.css */
+
+/* Define color variables */
+:root {
+    --primary-bg-color: #424242;
+    --secondary-bg-color: rgb(69, 97, 133);
+    --text-color: #acafb4;
+    --nav-link-hover-color: #ffffff;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: var(--primary-bg-color);
+    padding-top: 20px;
+}
+
+    /* Sidebar links */
+    .sidebar .nav-link {
+        color: var(--text-color);
+        padding: 10px 20px;
+        text-transform: capitalize;
+    }
+
+        .sidebar .nav-link:hover {
+            background-color: var(--secondary-bg-color);
+            color: var(--nav-link-hover-color);
+        }
+
+.nav-link {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    /* Active state for links */
+    .nav-link.active {
+        background-color: var(--secondary-bg-color);
+        color: var(--nav-link-hover-color);
+    }
+
+/* Content area styling */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
