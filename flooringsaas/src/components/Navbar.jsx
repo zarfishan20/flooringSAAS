@@ -7,7 +7,7 @@ const MobileNavbar = () => {
     return (
         <Navbar bg="light" expand="lg" className="d-lg-none">
             <Container>
-                <Navbar.Brand href="#">Flooring App</Navbar.Brand>
+                <Navbar.Brand href="/">Flooring App</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">

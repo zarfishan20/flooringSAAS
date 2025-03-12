@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MobileNavbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
@@ -12,9 +12,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
-function App() {
-    const location = useLocation();
-    const hideSidebar = location.pathname === '/';
+const App = () => {
     const [message, setMessage] = useState("");
 
     useEffect(() => {
@@ -29,12 +27,12 @@ function App() {
             <div className="app">
                 {/* Navbar for mobile */}
                 <MobileNavbar />
-
-                {/* Sidebar for larger screens */}
-                {!hideSidebar && <Sidebar />}
+                <Sidebar />
+            
 
                 <div className="content">
                     <Routes>
+                      
                         <Route path="/" element={<Home />} />
                         <Route path="/login" element={<Login />} />
                         <Route path="/signup" element={<SignUp />} />
