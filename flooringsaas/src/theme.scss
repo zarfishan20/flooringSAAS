@@ -1,0 +1,73 @@
+// Define Theme Colors
+$primary-color: rgb(69, 97, 133);
+$secondary-color: #424242;
+$accent-color: #acafb4;
+$text-color: #ffffff;
+
+// Apply Theme
+body {
+    background-color: $primary-color;
+    color: $text-color;
+    font-family: "Arial", sans-serif;
+}
+
+.navbar {
+    background-color: $secondary-color;
+    padding: 10px 20px;
+
+    .logo {
+        height: 40px;
+    }
+
+    .icon {
+        font-size: 20px;
+        cursor: pointer;
+        color: $text-color;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    .logout {
+        color: red;
+    }
+}
+
+.sidebar {
+    background-color: $secondary-color;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    transition: 0.3s;
+
+    &.collapsed {
+        width: 70px;
+    }
+
+    .sidebar-menu {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding: 10px;
+            color: $text-color;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                background-color: $accent-color;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $secondary-color;
+    color: $text-color;
+    padding: 10px 20px;
+    text-align: center;
+}

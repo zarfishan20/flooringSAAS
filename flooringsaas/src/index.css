@@ -1,3 +1,6 @@
+
+
+
 /* Mobile Navbar */
 .d-lg-none {
     display: block;
@@ -56,19 +59,51 @@ p {
             color: var(--nav-link-hover-color);
         }
 
-.nav-link {
+.navbar {
+    background-color: var(--primary-bg-color);
+}
+
+.navbar-link {
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-transform: capitalize;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
     /* Active state for links */
-    .nav-link.active {
+    .navbar-link.active {
         background-color: var(--secondary-bg-color);
         color: var(--nav-link-hover-color);
     }
+
+
+ .navbar-link:hover {
+    background-color: var(--secondary-bg-color);
+    color: var(--nav-link-hover-color);
+}
 
 /* Content area styling */
 .content {
     margin-left: 250px;
     padding: 20px;
 }
+
+.brand {
+    color: var(--text-color);
+}
+
+.footer {
+    background-color: var(--primary-bg-color); /* Theme background color */
+    
+    padding:  0; /* Padding for spacing */
+    position: fixed; /* Fixed at the bottom of the page */
+    width: 100%; /* Full width */
+    bottom: 0; /* Stick to the bottom of the page */
+}
+
+    .footer p {
+        margin: 0;
+        color: white; /* Theme text color */
+        font-size: 0.875rem;
+    }

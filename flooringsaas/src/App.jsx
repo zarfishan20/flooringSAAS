@@ -11,6 +11,7 @@ import Customers from './pages/Customer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import Footer from './components/Footer';
 
 const App = () => {
     const [message, setMessage] = useState("");
@@ -22,13 +23,12 @@ const App = () => {
     }, []);
 
     return (
-
+        <>
         <Router>
             <div className="app">
                 {/* Navbar for mobile */}
                 <MobileNavbar />
-                <Sidebar />
-            
+                
 
                 <div className="content">
                     <Routes>
@@ -46,6 +46,10 @@ const App = () => {
                 </div>
             </div>
         </Router>
+
+         {/* Footer */ }
+    <Footer />
+    </>
     );
 }
 
