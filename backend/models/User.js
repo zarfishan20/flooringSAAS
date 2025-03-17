@@ -1,10 +1,10 @@
-// This file allows you to configure ESLint according to your project's needs, so that you
-// can control the strictness of the linter, the plugins to use, and more.
+const mongoose = require("mongoose");
 
-// For more information about configuring ESLint, visit https://eslint.org/docs/user-guide/configuring/
+const UserSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    role: { type: String, enum: ["admin", "employee", "customer"], default: "customer" },
+});
 
-module.exports = [
-    {
-        rules: {}
-    }
-];
+module.exports = mongoose.model("User", UserSchema);
